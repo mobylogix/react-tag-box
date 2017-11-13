@@ -1,12 +1,7 @@
-import { PropTypes } from 'prop-types';
 import makeCache from './cache'
 import TagContainer from './TagBoxContainer'
 
 export default class TagBoxAsync extends TagContainer {
-  static propTypes = {
-    fetch: PropTypes.func.isRequired
-  }
-
   state = {
     tags: [],
     tag: '',
