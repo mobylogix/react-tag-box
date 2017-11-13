@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import TagProp from './utils'
 import TAG_REJECTED from './constants'
 import TagManager from './TagManager'
 import drive from './driver'
@@ -8,19 +6,6 @@ import Tag from './Tag'
 import Autocomplete from './Autocomplete'
 
 export default class TagBoxContainer extends Component {
-  static propTypes = {
-    selected: PropTypes.arrayOf(TagProp),
-    onSelect: PropTypes.func.isRequired,
-    renderNewOption: PropTypes.func,
-    removeTag: PropTypes.func.isRequired,
-    renderTag: PropTypes.func,
-    loadingText: PropTypes.string,
-    selectedText: PropTypes.string,
-    placeholder: PropTypes.string,
-    search: PropTypes.func,
-    exactMatch: PropTypes.func
-  }
-
   static defaultProps = {
     renderNewOption: input => `Add ${input}...`,
     loadingText: 'Loading...',
