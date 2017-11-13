@@ -1,5 +1,4 @@
-import React, { PropTypes } from 'prop-types';
-import TagProp from './utils'
+import React from 'react';
 
 const defaultRender = (tag, remove) => (
   <li className="tag-box-pill" key={tag.value}>
@@ -14,9 +13,4 @@ const defaultRender = (tag, remove) => (
 
 export default function Tag({ tag, removeTag, render = defaultRender }) {
   return render(tag, () => removeTag(tag))
-}
-
-Tag.propTypes = {
-  tag: TagProp.isRequired,
-  removeTag: PropTypes.func.isRequired
 }
