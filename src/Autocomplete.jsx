@@ -1,24 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 import classNames from 'classnames'
 import TagProp from './utils'
 
 export default class extends Component {
-  static propTypes = {
-    input: PropTypes.string,
-    selected: PropTypes.arrayOf(TagProp),
-    tags: PropTypes.arrayOf(TagProp).isRequired,
-    select: PropTypes.func.isRequired,
-    create: PropTypes.func.isRequired,
-    considering: TagProp,
-    consider: PropTypes.func.isRequired,
-    renderNewOption: PropTypes.func.isRequired,
-    loadingText: PropTypes.string,
-    selectedText: PropTypes.string,
-    loading: PropTypes.bool,
-    search: PropTypes.func.isRequired,
-    exactMatch: PropTypes.func.isRequired
-  }
 
   static defaultProps = {
     selected: []
